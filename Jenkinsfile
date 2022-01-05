@@ -17,12 +17,12 @@ pipeline{
         }
         stage("Deploy on Test"){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'merajcredentials', path: '', url: 'http://3.144.121.232:8080')], contextPath: '/app', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'merajcredentials', path: '', url: 'http://18.223.122.71:8080')], contextPath: '/app', war: '**/*.war'
             }
         }
         stage("Deploy on Prod"){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'merajcredentials', path: '', url: 'http://3.144.121.232:8080')], contextPath: '/app', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'merajcredentials', path: '', url: 'http://18.222.219.152:8080')], contextPath: '/app', war: '**/*.war'
             }
         }
     }
